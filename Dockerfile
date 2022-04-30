@@ -18,6 +18,6 @@ COPY . /code
 RUN chmod +x /code/app/train.py
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-# ENTRYPOINT ["python"]
+##ENTRYPOINT ["python"]
 
 CMD ["uvicorn", "app.main:app", "--reload", "--proxy-headers", "--host", "0.0.0.0", "--port", "8005"]
